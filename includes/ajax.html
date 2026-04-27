@@ -1,0 +1,48 @@
+ <meta charset="utf-8">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js?v=1.7.1"></script>
+<select class="count1">
+<option disabled selected>Выберите число</option>
+<option value="1">1</option>
+<option value="2">2</option>
+</select>
+<select class="count2">
+<option disabled selected>Выберите число</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select>
+<select class="count3">
+<option disabled selected>Выберите число</option>
+<option value="5">5</option>
+<option value="6">6</option>
+</select>
+
+
+<div id="price1"></div>
+<div id="price2"></div>
+<div id="price3"></div>
+<script>
+function getdetails(){
+$('.count1,.count2,.count3').off('change').change(
+function(){
+
+	var count1 = $( '.count1' ).val();	
+	var count2 = $( '.count2' ).val();	
+	var count3 = $( '.count3' ).val();	
+
+    $.ajax({
+        type: "POST",
+        url: "ajax.php",
+		dataType: 'json',
+        data: {c1:count1, c2:count2, c3:count3}
+    }).done(function( result )
+        {
+			$('#price1').html( result.price1 );
+			$('#price2').html( result.price2 );
+			$('#price3').html( result.price3 );
+		
+		
+        });
+});
+}
+getdetails();
+</script>

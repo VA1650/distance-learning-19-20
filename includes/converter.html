@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+  <meta charset="utf-8">
+  <title>Конвертер</title>
+  <link rel="stylesheet" type="text/css" href="converter.css">
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ </head> 
+ <body>
+  <form method="post" id='converter'><div class='converter'>
+<div class="center"><select class='select select1' name="e0">
+    <option value='0' selected disabled> </option>
+    <option value='1'>Длина</option>
+    <option value='2'>Площадь</option>
+    <option value='3'>Объём</option>
+</select></div>
+   <div class='left item'><input class='input' type="text" id="n" name="n" value="Значение 1"  maxlength="10" size="10" readonly><br>
+   <select name="units" class='select s2' id='res'>
+      
+   </select></div>
+   <div class="equals">&nbsp;&nbsp;=&nbsp;&nbsp;</div>
+<div class='right item'><input class='input' type="text" id='n1' name="n1" value="Значение 2"  maxlength="10" size="10" readonly><br>
+    <select name="units1" class='select s3' id='res2'>
+     
+     
+   </select></div>
+   <div class='center'><input class='input input1' type="submit" name="action" value="Преобразовать"></div></div>
+   <input type='hidden' value='1' name='edit'>
+   <div id='res'></div>
+   </form>
+ </body>
+
+<script>
+function getdetails(){
+$('.select1').off('change').change(
+function(){
+
+  var f1 = $( '.select1' ).val();  
+  var f2 = $( '.s2' ).val();  
+  var f3 = $( '.s3' ).val();
+
+  $( "#n" ).focus(function() {
+   $('#n').val('#n').prop('value', '');
+  });
+
+  $( "#n1" ).focus(function() {
+   $('#n1').val('#n1').prop('value', '');
+  });
+
+  //$('input').val('#n').prop('value', '');
+  $("#n").removeAttr("readonly");
+  $("#n1").removeAttr("readonly");
+  //$( '#n' ).val() = null;
+  //$( '#n1' ).val() = null;
+
+    $.ajax({
+        type: "POST",
+        url: "ajax.php",
+    dataType: 'json',
+        data: {c1:f1, c2:f2, c3:f3}
+    }).done(function( result )
+        {
+      $('#res').html( result.res1 );
+    $('#res2').html( result.res1 );
+    
+        });
+});
+
+
+$( "#converter" ).submit(function( event ){ // задаем функцию при срабатывании события "submit" на элементе <form>
+//event.preventDefault(); 
+$.ajax({
+        type: "POST",
+        url: "converter.php",
+    dataType: 'json',
+        data: {v:"value"}
+    }).done(function( result )
+        {
+    $('#res2').html( result.res2 );
+    
+        });
+});
+}
+
+
+getdetails();
+</script>
+
+</html> 

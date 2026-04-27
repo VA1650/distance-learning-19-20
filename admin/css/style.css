@@ -1,0 +1,190 @@
+@charset "utf-8";
+
+@media screen {
+
+html { background-color: #96d0e7; }
+body { width: 99%; height: 99%; position: absolute; top: 0.5%; left: 0.5%; 
+       background-color: #63a8c7; margin: 0; padding: 0; font-family: arial, sans-serif; }
+a {
+	color: #b6dee9;
+}
+
+body > div.body { position: relative; width: 100%; height: 100%; max-width: 1200px; margin: auto; }
+
+body > div.body > div.contentblock { width: 78%; right: 2%; overflow: auto; }
+body > div.body > div.menublock { width: 18%; right: 80%; }
+body > div.body > div.contentblock,
+body > div.body > div.menublock { height: 70%; position: absolute; top: 15%; }
+body > div.body > div.contentblock > div.content { max-width: 700px; margin: auto; padding: 20px 30px; }
+body > div.body > div.contentblock > div.content > h1 { text-align: center; font-size: 150%; }
+body > div.body > div.contentblock > div.content > h2 { text-align: center; font-size: 130%; }
+body > div.body > div.contentblock > div.content > h3 { text-align: left;  font-size: 115%; }
+body > div.body > div.contentblock > div.content > p { text-align: justify; }
+
+body > div.body > div.menublock > div.menu { width: 95%; position: absolute; top: 10%; right: 0; font-size: 150%; z-index: 10; }
+body > div.body > div.menublock > div.menu > div,
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div  { overflow: hidden; }
+body > div.body > div.menublock > div.menu > div:hover,
+body > div.body > div.menublock > div.menu > div.pt,
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div:hover,
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div.pt { overflow: visible; }
+body > div.body > div.menublock > div.menu > div:hover,
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div:hover { background-color: #e5e5f1; color: #35536b;}
+body > div.body > div.menublock > div.menu > div.pt > div.menu
+  { min-width: 60%; font-size: 66%; float: right; margin-left: 5%; margin-top: 3%; }
+
+/* size, position */
+body > div.body > div.menublock > div.menu > div { float: right; position: relative; }
+body > div.body > div.menublock > div.menu > div { right: 2px; }
+body > div.body > div.menublock > div.menu > div.pt { right: 1px; }
+body > div.body > div.menublock > div.menu > div.pt:after { display: block; width: 1px; height: 100%;
+                                                            position: absolute; bottom: 0px; right: -1px; content: ""; }
+body > div.body > div.menublock > div.menu > div { width: 92%; clear: right; padding: 4% 6%; }
+body > div.body > div.menublock > div.menu > div.pt { width: 104%; padding-right: 0; }
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div { width: 88%; float: right; clear: right; padding: 4% 7%; }
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div.pt { width: 95%; }
+
+/* background */
+body > div.body > div.contentblock,
+body > div.body > div.menublock > div.menu > div.pt,
+body > div.body > div.menublock > div.menu > div.pt:after,
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div.pt { background-color: #e5e5f1 }
+body > div.body > div.menublock > div.menu > div  { background-color: #35536b; }
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div { background-color: #35536b; }
+
+/* border */
+body > div.body > div.contentblock,
+body > div.body > div.menublock > div.menu > div,
+body > div.body > div.menublock > div.menu > div.pt,
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div,
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div.pt,
+body > div.body > div.head,
+body > div.body > div.footer { border-style: solid; border-width: 1px; }
+
+body > div.body > div.menublock > div.menu > div,
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div { border-color: #35536b; }
+
+body > div.body > div.contentblock,
+body > div.body > div.menublock > div.menu > div.pt,
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div.pt,
+body > div.body > div.head,
+body > div.body > div.footer { border-color: #35536b; }
+
+body > div.body > div.menublock > div.menu > div.pt + div,
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div.pt + div { border-top: none; }
+.menulink:hover { /*background-color: #f3ced5;*/ color: #35536b;}
+
+body > div.body > div.menublock > div.menu > div:last-child,
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div:last-child { border-bottom-style: solid; }
+
+body > div.body > div.menublock > div.menu > div,
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div { border-bottom-style: none; }
+
+body > div.body > div.menublock > div.menu > div,
+body > div.body > div.menublock > div.menu > div.pt,
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div,
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div.pt { border-right-style: none; }
+
+/*---------*/
+
+body > div.body > div.contentblock { border-radius: 10px; }
+body > div.body > div.menublock > div.menu > div { border-radius: 10px 0px 0px 10px; }
+body > div.body > div.menublock > div.menu > div.pt > div.menu > div { border-radius: 5px 0px 0px 5px; }
+
+
+body > div.body > div.head,
+body > div.body > div.footer { position: absolute; right: 2%; width: 96%; height: 11%; border-radius: 5px; padding: 12px 12px 0px 12px;}
+body > div.body > div.head:after,
+body > div.body > div.footer:after { text-align: center; display: block; position: absolute; width: 100%; }
+body > div.body > div.head:after { bottom: 40%; }
+body > div.body > div.footer:after { top: 40%; }
+/*body > div.body > div.head:hover:after { content: "Шапка сайта"; bottom: 35%;}
+body > div.body > div.footer:hover:after { content: "Подвал сайта"; bottom: 50%;}*/
+body > div.body > div.head { top: 1%; background-color: #e5e5f1; }
+body > div.body > div.footer { bottom: 1%; background-color: #e5e5f1; }
+body > div.body > div.head > p,
+body > div.body > div.footer > p { margin: 1%; }
+
+body > div.body > div.menublock > div.menuhead { position: absolute; top: 2%; right: 5%; width: 95%; height: 6%;
+                                                  background-color: #f3ced5; font-size: 150%; color:#35536b; font-style:italic;font-weight: 600;}
+body > div.body > div.menublock > div.menuhead:after { content: "Меню"; text-align: center; font-size: 75%;
+                                                       display: block; width: 100%; position: absolute; bottom: 25%; }
+
+/*body > div.body > div.menublock > div.techmenu { position: absolute; width: 74%; padding: 8%; font-size: 75%; text-align: center;
+                                    color: gray; background-color: white; overflow: hidden; }
+body > div.body > div.menublock > div.a { bottom: 15%; }
+body > div.body > div.menublock > div.a:hover
+  { content: ".";
+    border-radius: 0; border: outset 6px red; }
+body > div.body > div.menublock > div.b { bottom: 0; word-spacing: 7px; }
+body > div.body > div.menublock > div.b:hover
+  { content: ".";
+    border-radius: 0; border: outset 6px red; }*/
+
+body > div.body > div.menublock a { text-decoration: none; }
+body > div.body > div.menublock a[href^="http://"] { text-decoration: underline; }
+
+body > div.body a.h { text-decoration: inherit; color: inherit; cursor: text; }
+
+}
+
+@media print
+{ div.body > * { display: none; }
+  div.body > div.contentblock { display: block; padding: 1cm 1cm 1cm 2cm; }
+}
+
+
+/*
+div.body { border: orange solid 2px; }
+div.menu { border: solid orange 1px; }
+div.contentblock,
+div.menublock { border-style: solid; border-width: 1px; border-radius: 6px; }
+div.contentblock { border-color: red; }
+div.menublock { border-color: green; }
+div.content { border: solid gray 1px; }
+div.head,
+div.footer { border: solid blue 1px; border-radius: 6px; }
+
+div#off:target { display: none; }
+
+#e5e5f1 -- head, footer
+#96d0e7 -- html
+#63a8c7 -- body
+#35536b -- border-color
+#f3ced5 -- menuhead
+#b6dee9 -- текст меню (ссылка)
+*/
+/*.mainlink {color: #35536b;}*/
+
+/*Авторизация*/
+.authorization {text-align: center;}
+label {color: #35536b;}
+input {background-color: #96d0e7; border-color: #63a8c7; border-radius: 5px 5px 5px 5px;}
+
+/*Плоская двенадцатиконечная звезда*/
+#egg {
+    width: 45px;
+    height: 63px;
+    background: #f3cc55;/*#ce96a0, #ffc000*/
+	float: left;
+    display: block;
+    -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+	margin-right: 12px;
+}
+#egg > span{
+	display: none;
+	transition: all 0.5s;
+	margin-left:-5px;
+	transition: all 0.5s;
+}
+#egg:hover > span{
+	display: inline;
+	font-size: 24pt;
+	position: relative;
+	top: 16px;
+	left: 13px;
+	font-weight: 600;
+	color: white;
+	margin-left:0px;
+}
