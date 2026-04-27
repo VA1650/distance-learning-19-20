@@ -1,11 +1,11 @@
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Archived-red?style=for-the-badge)
+
 Дистанционное обучение — Web Archive (20XX)
 
     ⚠️ Project Status: Legacy / Archive
     Этот проект выложен в демонстрационных целях как пример раннего опыта в веб-разработке. На данный момент поддержка проекта прекращена, а база данных не включена в репозиторий.
-
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Archived-red?style=for-the-badge)
 
 📝 Описание
 
